@@ -22,14 +22,14 @@ while not endProgram:
         elif numberToConvert % 1 != 0:
             print("Number cannot be a decimal. Please try again...\n\n")
         else:
-            place128 = 0
-            place64 = 0
-            place32 = 0
-            place16 = 0
-            place8 = 0
-            place4 = 0
-            place2 = 0
-            place1 = 0
+            place128 = '0'
+            place64 = '0'
+            place32 = '0'
+            place16 = '0'
+            place8 = '0'
+            place4 = '0'
+            place2 = '0'
+            place1 = '0'
 
             binary_divider = 128
             placeholder = 0
@@ -40,26 +40,27 @@ while not endProgram:
 
                     match binary_divider:
                         case 128:
-                            place128 = 1
+                            place128 = '1'
                         case 64:
-                            place64 = 1
+                            place64 = '1'
                         case 32:
-                            place32 = 1
+                            place32 = '1'
                         case 16:
-                            place16 = 1
+                            place16 = '1'
                         case 8:
-                            place8 = 1
+                            place8 = '1'
                         case 4:
-                            place4 = 1
+                            place4 = '1'
                         case 2:
-                            place2 = 1
+                            place2 = '1'
                         case 1:
-                            place1 = 1
+                            place1 = '1'
 
                 binary_divider /= 2
 
-            print("The number in binary is: " + str(place128) + str(place64) + str(place32) + str(place16) + str(
-                place8) + str(place4) + str(place2) + str(place1))
+            print(
+                "The number in binary is: {0}{1}{2}{3}{4}{5}{6}{7}".format(place128, place64, place32, place16, place8,
+                                                                           place4, place2, place1))
             exit_option = input("Enter 'x' to close the program. Enter anything else to run again: ")
 
             if exit == 'x':
